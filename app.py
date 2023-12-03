@@ -30,7 +30,7 @@ def generate_image():
     elif 'ramithawi_input' in request.form:
         user_input = request.form['ramithawi_input']
         # Prompt for the ramithawi section
-        prompt = f'still from a film, photorealistic, a classic hand-drawn 3D animation, close up of felt puppets {user_input} , classy, ancient, tribal in a forest in the 1800's greens, oranges, blacks, reds, golds, styled like a classical painting, cinematic'
+        prompt = f'still from a film, photorealistic, a classic hand-drawn 3D animation, close up of felt puppets {user_input} , classy, ancient, tribal in a forest in the 1800\'s greens, oranges, blacks, reds, golds, styled like a classical painting, cinematic'
     elif 'tropical_input' in request.form:
         user_input = request.form['tropical_input']
         # Prompt for the tropical section
