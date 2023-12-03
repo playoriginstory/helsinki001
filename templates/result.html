@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generated Image</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #4e54c8, #8f94fb, #4e54c8);
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        img {
+            max-width: 80%;
+            max-height: 600px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #6a75ca;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .back-arrow {
+            display: inline-block;
+            margin-right: 10px;
+            transform: rotate(-90deg); /* Arrow pointing left */
+        }
+
+        .chat-iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .chat-iframe {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <h1>Generated Image</h1>
+        {% if image %}
+        <img src="{{ image }}" alt="Generated Image">
+        {% else %}
+        <p>No image found. Please try again.</p>
+        {% endif %}
+        <a href="/" class="back-link">
+            <span class="back-arrow">←</span>
+            Back to Generator
+        </a>
+    </div>
+    <iframe src="https://embed.fixie.ai/agents/6a4919d7-4e6e-48e3-bd5f-ab2870dbe9d0?debug=1&agentStartsConversation=1" allow="clipboard-write" class="chat-iframe"></iframe>
+</body>
+</html>
